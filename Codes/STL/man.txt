@@ -1,0 +1,60 @@
+Pair 
+p.first,p.second
+comparision b/w two pairs is possible
+
+Vector
+O(n): v.insert(it,val),
+      v.erase(it,val),
+      v.clear()
+
+O(1): v.empty(),
+      v.push_back(val),
+      v.pop_back(),
+      v.size(),
+      v.begin(),v.end(),
+
+      (1) pos = it-v.begin()
+      (2) x th pos =v.begin()+(x-1)
+
+Deque:
+    everything is simillar to vector
+    extra:
+        O(1):
+            d.push_front(val)
+            d.pop_front()
+Set
+O(log n):
+      s.insert(val),
+      s.erase(val),
+      s.contains(val),
+      
+      (1)set does not have random access iterator
+      (2)for sets to work for random datatype,the datatype must have '<' function implemented
+      (3) s.begin()+2 --> not possible;
+      (4) s.begin()++ -->possible;
+      (5) pos = it-s.begin()
+
+map
+    ()everything is like set;
+
+unordered_set
+    O(1): sometimes it results in O(n)      
+        s.insert(val),
+        s.erase(val),
+        s.contains(val),
+        (1)unordered_set doesn't work for pair,vector,set;
+
+unordered_map:    
+        (1)key cannot be pair,vector,set,map;
+
+
+
+STL functions:(Vector,Deque,Set)
+    max_element(v.begin(),v.end());-->return iterator
+    min_element(v.begin(),v.end());--> return iterator
+    find(v.begin(),v.end(),val)--> return iterator
+    count(v.begin(),v.end(),val)--> return int
+
+    sort(v.begin(),v.end(),comp)-->does not work for set
+
+        
